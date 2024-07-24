@@ -1074,13 +1074,13 @@ libcbase = leak - 224 - 0x10 - libc.sym['__malloc_hook']
 
 glibc-2.31在`_int_malloc`的unsorted_bin部分**增加了检测**
 
-![image-20240723233215157](./My-how2heap/images/image-20240723233215157.png)
+![image-20240723233215157](images/image-20240723233215157.png)
 
 
 
 how2heap的教程
 
-![image-20240723233608513](./My-how2heap/images/image-20240723233608513.png)
+![image-20240723233608513](images/image-20240723233608513.png)
 
 ```
 diff;h=b90ddd08f6dd688e651df9ee89ca3a69ff88cd0c
@@ -1102,11 +1102,11 @@ This new poc uses the same primitive as the previous one. Theoretically speaking
 
 free前：
 
-![image-20240723235432150](./My-how2heap/images/image-20240723235432150.png)
+![image-20240723235432150](./images/image-20240723235432150.png)
 
 free后：
 
-![image-20240723235500793](./My-how2heap/images/image-20240723235500793.png)
+![image-20240723235500793](images/image-20240723235500793.png)
 
 再malloc的时候又是从topchunk切割了。
 
