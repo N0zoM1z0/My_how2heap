@@ -247,7 +247,7 @@ int main() {
 
 ---
 
-![image-20240721174251301](images\image-20240721174251301.png)
+![image-20240721174251301](images/image-20240721174251301.png)
 
 **简化版**:
 
@@ -551,15 +551,15 @@ int main(){
 
 reverse into 前：
 
-![image-20240721192943440](images\image-20240721192943440.png)
+![image-20240721192943440](images/image-20240721192943440.png)
 
 触发前都是d0：
 
-![image-20240721193045795](images\image-20240721193045795.png)
+![image-20240721193045795](images/image-20240721193045795.png)
 
 reverse into 后：
 
-![image-20240721193113501](images\image-20240721193113501.png)
+![image-20240721193113501](images/image-20240721193113501.png)
 
 
 
@@ -685,15 +685,15 @@ chunk r @ 0x7fffdc8f6a18, where the target is!
 
 how2heap demo的运行结果：
 
-![image-20240721193751361](images\image-20240721193751361.png)
+![image-20240721193751361](images/image-20240721193751361.png)
 
 
 
-![image-20240721200321992](images\image-20240721200321992.png)
+![image-20240721200321992](images/image-20240721200321992.png)
 
 这些伪造的要求都是从fastbin的free源码要求来的。
 
-![image-20240721202528629](images\image-20240721202528629.png)
+![image-20240721202528629](images/image-20240721202528629.png)
 
 
 
@@ -739,7 +739,7 @@ int main()
 
 ## house _of_einherjar
 
-![image-20240722000255028](images\image-20240722000255028.png)
+![image-20240722000255028](images/image-20240722000255028.png)
 
 how2heap的详细教程
 
@@ -806,7 +806,7 @@ Got control on target/stack!
 
 这里的`After the patch xxx`指的是：
 
-![image-20240721233630522](images\image-20240721233630522.png)
+![image-20240721233630522](images/image-20240721233630522.png)
 
 这是一个原先的错误断言，后面就改为我们熟知的**tcache->counts[tc_idx] > 0**的检测了。
 
@@ -839,9 +839,9 @@ top chunk
 
 (注意！由于有tcache，我们**要先填满chunk C大小的tcache bin再free(C)**才会触发unlink合并)
 
-<img src="images\image-20240722003243766.png" alt="image-20240722003243766" style="zoom: 50%;" />
+<img src="images/image-20240722003243766.png" alt="image-20240722003243766" style="zoom: 50%;" />
 
-<img src="images\image-20240722003445545.png" alt="image-20240722003445545" style="zoom: 67%;" />
+<img src="images/image-20240722003445545.png" alt="image-20240722003445545" style="zoom: 67%;" />
 
 再把A+B+C申请回来，指针指向A下的fake_chunk；
 
